@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "lato", sans-serif;
+    
+}
+
+header {
+    height: 10vh;
+    color: white;
+    background: #123;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop {
+   display: flex;
+   justify-content: space-between;
+   width: 100%; 
+}
+
+.logo {
+    padding: 0px 25px;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.desktop .nav-links {
+    display: flex;
+    align-items: center; 
+    justify-content:flex-end;
+    background-color: red;
+}
+
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+}
+
+.mobile .fas {
+   display:none;
+}
+
+.nav-links2 {
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    }
+
+.main h1 {
+    color: navy;
+    padding: 30px;
+    font-size: 3rem;
+}
+
+.main h3 {
+    position: relative;
+    color: darkolivegreen;
+}
+
+.base {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    background-color: red;
+    padding: 5px;
+}
+
+.base li {
+    list-style: none;
+    padding: 2px 0px;
+}
+
+.base li a {
+    text-decoration: none;
+    list-style: none;
+    font-size: medium;
+    color: #fff;
+   }
+
+@media only screen and (max-width: 993px) {
+
+.desktop .nav-links {
+    display: none;
+}
+
+.mobile {
+    display: flex;
+    flex-direction: column;
+    background-color:#2345;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile span .fas{ 
+    display: flex;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+  
+}
+
+.mobile .fas:hover {
+    color: orange;     
+    transition-duration: 0.4s;
+}
+
+.mobile .nav-links2 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: absolute;
+    right: 0vw;
+    top: 10vh;
+    background-color: black;
+    height: 90vh;
+    z-index: 10;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.mobile .nav-links2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    size: 1.5rem;
+    font-weight: 600;
+    background-color: yellow;
+    padding: 20px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+}
